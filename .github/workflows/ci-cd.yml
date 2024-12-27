@@ -23,5 +23,5 @@ jobs:
           path: ./build
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.CI_CD_TOKEN }}
+          github_token: ${{ secrets.CI_CD_TEST }}
           publish_dir: ./build
