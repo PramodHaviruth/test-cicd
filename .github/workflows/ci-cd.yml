@@ -26,3 +26,6 @@ jobs:
         with:
           github_token: ${{ secrets.CI_CD_TEST }}
           publish_dir: ./build
+      - run: ls -ltr
+      - run: ls -ltr /home/runner/work/test-cicd/
+      - run: ls -ltr /home/runner/work/test-cicd/test-cicd/build/
