@@ -21,7 +21,7 @@ jobs:
       - uses: actions/download-artifact@v4.1.8
         with:
           path: ./build
-      - uses: actions/deploy-pages@v4.0.5
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.CI_CD_TEST }}
-          preview: true
+          github_token: ${{ secrets.CI_CD_TEST }}
+          publish_dir: ./build
