@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4.1.8
         with:
+          name: prod-files
           path: ./build
       - uses: peaceiris/actions-gh-pages@v3
         with:
