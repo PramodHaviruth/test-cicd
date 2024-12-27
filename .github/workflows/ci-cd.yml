@@ -13,4 +13,15 @@ jobs:
       - uses: actions/upload-artifact@v4.5.0
         with:
           name: prod-files
-          path: ./build    
+          path: ./build
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4.1.8
+        with:
+          path: ./build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.CI_CD_TOKEN }}
+          publish_dir: ./build
