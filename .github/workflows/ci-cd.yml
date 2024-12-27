@@ -1,0 +1,8 @@
+name: test-cicd
+on: push
+jobs:
+  echo-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display-hello
+        run: echo "CODE PUSHED!!!"
